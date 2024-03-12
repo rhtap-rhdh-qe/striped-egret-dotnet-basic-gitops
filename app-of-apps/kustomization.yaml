@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: striped-egret-dotnet-basic 
+  janus-idp.io/tekton: striped-egret-dotnet-basic
+  backstage.io/kubernetes-id: striped-egret-dotnet-basic
+  backstage.io/kubernetes-namespace: rhtap-e2e-ci 
+  app.kubernetes.io/part-of: striped-egret-dotnet-basic
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
